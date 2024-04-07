@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opt4048gui"
+version = "0.0.1"
+requires-python = "~= 3.9"
+
+dependencies = [
+    "requests",
+    "poethepoet",
+    "pyglet",
+    "colormath",
+    "sparkfun_qwiic_i2c"
+]
+
+[project.scripts]
+opt4048gui = "opt4048gui.main:main"
+
+[tool.poe.tasks]
+run = "opt4048gui"
